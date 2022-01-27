@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Mirror Lake</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</head>
+
+<body>
+  <div id='button'>
+      <img id='sound' src='src/sound.gif'></img>
+  </div>
+  <div id='top'></div>
+    <img id='image' src=''></img>
+  <div id='bottom'>
+    <a href='Home Page.html' id='back'>Go Back</a>
+    <h1 style="margin-top: 300px;">
+      How peaceful. The lake is quite nice now that they have rebuilt it and its
+      running. If I had to guess, I would say most of my dining dollars were spent
+      at Mirror Lake. Nothing quite like chicken tenders with the sound of water.
+    </h1>
+  </div>
+
+  <script>
+
+    /*animation to explode bubble*/
+    var explode = anime({
+      targets: '#button',
+      scale: [1, 10],
+      translateZ: 0,
+      duration: 500,
+      easing: 'easeOutSine',
+      autoplay: false
+    })
+
+    /*function to display and destroy image*/
+    var audio_on = false;
+    var audio = new Audio('src/Mirror Lake.mp3');
+
+    function audio_toggle () {
+      if(!audio_on) {
+        console.log('hello');
+        audio.play();
+        audio_on = true;
+      }
+      else {
+        console.log('goodbye');
+        audio.pause();
+        audio_on = false;
+      }
+    }
+
+    /*function to toggle bubble*/
+    function toggle() {
+
+      if (explode.began) {
+        explode.reverse()
+      }
+
+      if(explode.progress == 100 && explode.direction === 'reverse'){
+          explode.completed = false;
+      }
+
+      if (explode.paused) {
+        explode.play()
+      }
+    }
+
+    document.body.addEventListener('mousedown', toggle)
+    document.body.addEventListener("click", audio_toggle);
+    audio.addEventListener('ended', function() {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+
+  </script>
+</body>
+</html>
