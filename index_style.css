@@ -46,3 +46,16 @@ a {
   left: -19px;
   top: 6px;
 }
+
+.left:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid #181a27;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #181a27;
+  border-bottom: 10px solid transparent;
+  right: -19px;
+  top: 6px;
+}
