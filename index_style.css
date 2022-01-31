@@ -1,0 +1,48 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+  background-color: #e88565;
+}
+
+a {
+  text-decoration: none;
+}
+
+#container {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+#map {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.box {
+  width: 300px;
+  margin: 50px auto;
+  background: #181a27;
+  padding: 20px;
+  text-align: center;
+  font-weight: 900;
+  color: #fff;
+  font-family: arial;
+  position: relative;
+}
+
+.right:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid #181a27;
+  border-top: 10px solid #181a27;
+  border-bottom: 10px solid transparent;
+  left: -19px;
+  top: 6px;
+}

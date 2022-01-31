@@ -1,7 +1,7 @@
 /*animation to explode bubble*/
 var explode = anime({
   targets: '#button',
-  scale: [1, 10],
+  scale: [1, 5],
   translateZ: 0,
   duration: 500,
   easing: 'easeOutSine',
