@@ -33,7 +33,7 @@ function createNetwork() {
     }
   }
 
-  nodes.push(new Neuron((layer + 1) * 200 - 80, 0));
+  nodes.push(new Neuron(layer * 200 - 80, 0));
 
   for(let i = 0; i < nodes.length; i++) {
 

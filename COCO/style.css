@@ -1,0 +1,90 @@
+body {
+  background-color: #000000;
+}
+
+h1 {
+  font-style: italic;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+h2 {
+  text-align: center;
+  top: 50%;
+  color: #00FF66;
+}
+
+video {
+  position: absolute;
+  clear: both;
+  display: block;
+}
+
+.removed {
+  display: none;
+}
+
+.note {
+  font-style: italic;
+  font-size: 130%;
+}
+
+.videoView, .classifyOnClick {
+  position: relative;
+  top: 50%;
+  left: calc(50% - 320px);
+  float: left;
+  cursor: pointer;
+}
+
+.videoView p, .classifyOnClick p {
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 320px);
+  padding: 5px;
+  background-color: rgba(255, 111, 0, 0.85);
+  color: #FFF;
+  border: 1px dashed rgba(255, 255, 255, 0.7);
+  z-index: 2;
+  font-size: 12px;
+  margin: 0;
+}
+
+.highlighter {
+  background: rgba(0, 255, 0, 0.25);
+  border: 1px dashed #fff;
+  z-index: 1;
+  position: absolute;
+}
+
+.classifyOnClick {
+  z-index: 0;
+}
+
+.classifyOnClick img {
+  width: 100%;
+}
+
+#back {
+  display: inline-block;
+  padding: 0.5em 1.7em;
+  margin: 0 0.1em 0.1em 0;
+  border: 0.16em solid rgb(255, 255, 255);
+  border-radius: 2em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+  text-shadow: 0 0.04em 0.04em rgba(255, 255, 255, 0.253);
+  text-align: center;
+  transition: all 0.2s;
+  position: absolute;
+  right:    50px;
+  bottom:   50px;
+}
+
+#back:hover {
+  color: black;
+  background-color: rgb(255, 255, 255);
+}

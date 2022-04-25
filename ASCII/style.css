@@ -1,16 +1,36 @@
-html, body {
-  margin: 0;
-  padding: 0;
+body {
   background-color: #000000;
-}
-canvas {
-  display: block;
 }
 
 h1 {
   font-style: italic;
   text-align: center;
   color: #FFFFFF;
+}
+
+h2 {
+  text-align: center;
+  color: #00FF66;
+}
+
+view {
+  position: absolute;
+}
+
+video#camera-stream {
+  background-color: black;
+  position: absolute;
+  left: 25%;
+}
+
+canvas#hidden-canvas {
+  display: none;
+}
+
+canvas#output-canvas {
+  background-color: black;
+  position: absolute;
+  right: 25%;
 }
 
 #back {

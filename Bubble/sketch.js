@@ -16,8 +16,8 @@ class Circle {
 
   display() {
 
-    if(this.radius < 250) {
-      this.radius += 4;
+    if(this.radius < 400) {
+      this.radius += 10;
     }
 
     fill(this.r, this.g, this.b);
@@ -54,7 +54,7 @@ function write_text() {
   textStyle(BOLDITALIC);
   fill(0, 0, 0);
 
-  var words = "MAYBE IT'S WAITING FOR YOU ................";
+  var words = "MAYBE THEY SLEEP AND WAIT TO BE WOKEN ................";
   words = words.split(" ");
 
   for (var i = 0; i < words.length; i++) {
